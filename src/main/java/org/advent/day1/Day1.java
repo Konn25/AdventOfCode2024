@@ -1,4 +1,4 @@
-package org.advent;
+package org.advent.day1;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class Day1 {
     public static void main(String[] args) {
 
 
-        String path = "src/main/java/org/advent/data.txt";
+        String path = "src/main/java/org/advent/day1/data.txt";
 
         ArrayList<Integer> firstList = new ArrayList<>();
 
@@ -43,7 +43,6 @@ public class Day1 {
             }
 
         }catch (IOException e){
-            e.printStackTrace();
             System.out.println("ERROR: "+e);
         }
     }
@@ -96,8 +95,6 @@ public class Day1 {
         Map<Integer,Integer> reducedMap = map.entrySet().stream()
                 .filter(data -> data.getValue() !=0)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-
-        //reducedMap.forEach((key, value) -> System.out.println(key + ":" + value));
 
         reducedMap.forEach((key, value) -> result[0] += (key * value));
 
