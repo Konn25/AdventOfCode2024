@@ -1,4 +1,4 @@
-package org.advent.day1;
+package day1;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class Day1 {
     public static void main(String[] args) {
 
 
-        String path = "src/main/java/org/advent/day1/data.txt";
+        String path = "src/main/java/day1/data.txt";
 
         ArrayList<Integer> firstList = new ArrayList<>();
 
